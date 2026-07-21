@@ -1,0 +1,7 @@
+# uv environments
+.venv/
+.uv/
+
+.env
+
+
