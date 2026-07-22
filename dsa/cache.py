@@ -1,4 +1,5 @@
 from icecream import ic
+from collections import deque
 
 
 class Cache:
@@ -18,11 +19,21 @@ class Cache:
     
 # Implement the same thing now using collections,
 # in this case, using deque
+class CacheDeque:
+    def __init__(self, len):
+        self.deque = deque(maxlen=len)
 
+    def insert(self, value):
+        self.deque.append(value)
+        ic(self.deque)
+        
+    def pop(self):
+        self.deque.pop()
+        ic(self.deque)
 
 
 def main():
-    cache = Cache()
+    cache = CacheDeque(3)
     cache.insert(4)
     cache.insert(3)
     cache.insert(2)
