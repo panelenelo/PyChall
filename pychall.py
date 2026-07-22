@@ -3,7 +3,6 @@ from icecream import ic
 from functools import reduce
 from collections import Counter
 import urllib
-import numpy as np
 
 
 def zero():
@@ -77,7 +76,7 @@ def four():
 
 
 def main():
-    four()
+    zero()
 
 if __name__ == "__main__":
     main()
