@@ -2,17 +2,15 @@ from icecream import ic
 
 
 
+def par_sum_sorted():
+    pass
+
 
 
 
 def main():
-    data = []
-    with open('text2.txt', 'r') as f:
-        data = f.read()
+    pass
 
-    for i in data:
-        if (64 < ord(i) < 91 or 96 < ord(i) < 123):
-            ic(i)
 
     
     
