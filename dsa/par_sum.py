@@ -13,6 +13,9 @@ def par_sum_sorted(nums: list[int], target:int) -> list[int]:
         if(sum > target):
             r-=1
 
+def par_sum(nums:list[int], target:int) -> list[int]:
+    pass
+
 
 
 
