@@ -6,14 +6,18 @@ def triple_sum_sorted(nums: list[int], target:int) -> list[int]:
     l = 1
     r = len(nums)-1
     fix = 0
-    while(fix < len(nums)-3):
+    while(fix < len(nums)-2):
         while (l < r):
-            if (l+r+fix == target):
+            sum = nums[l]+nums[r]+nums[fix]
+            if (sum == target):
                 return [l, r, fix]
-            if (l+r+fix > target):
+            if (sum > target):
                 r-=1
-            if (l+r+fix < target):
+            if (sum < target):
                 l+=1
+        fix=+1
+        l=fix+1
+        r = len(nums)-1
     return [-1]
 
 def triple_sum(nums:list[int], target:int) -> list[int]:
@@ -23,7 +27,7 @@ def triple_sum(nums:list[int], target:int) -> list[int]:
 
 
 def main():
-    nums = [-1, -1, 1, 2, 2]
+    nums = [0,0,0]
     target = 0
     result = triple_sum_sorted(nums, target)
 
