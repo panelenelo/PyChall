@@ -1,3 +1,3 @@
 # PyChall
-Solving Python Challenge
+Solving Python Challenge and coding interview problems.
 
