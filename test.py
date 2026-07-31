@@ -9,6 +9,7 @@ def par_sum_sorted():
 
 
 def main():
+    #for i, v in enumerate(nums):
     pass
 
 
