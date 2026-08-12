@@ -2,16 +2,25 @@ from icecream import ic
 
 
 def zero_striping(nums: list[list[int]]) -> list[list[int]]:
-    maps = []
+    rows = set()
+    cols = set()
+
+    for i,v in enumerate(nums):
+        for j, c in enumerate(v):
+            if(c == 0):
+                rows.add(i)
+                cols.add(j)
 
     for i, v in enumerate(nums):
-        maps.append(dict())
         for j, c in enumerate(v):
-            maps[i][j] = c
+            if((i in rows) or (j in cols)):
+                nums[i][j] = 0
 
-    for i, m in maps:
-        if(0 in m):
-            col = m[]
+    ic(rows)
+    ic(cols)
+    ic(nums)
+
+
     
 
 
