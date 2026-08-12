@@ -16,12 +16,45 @@ def zero_striping(nums: list[list[int]]) -> list[list[int]]:
             if((i in rows) or (j in cols)):
                 nums[i][j] = 0
 
-    ic(rows)
-    ic(cols)
-    ic(nums)
+    return nums
 
+def zero_striping_inplace(nums: list[list[int]]) -> list[list[int]]:
+    row_has_zero = False
+    col_has_zero = False
+    r = len(nums)
+    c = len(nums[0])
+
+    for i in range(r):
+        if(nums[i][0] == 0):
+            row_has_zero = True
+            break
+
+    for j in range(c):
+        if(nums[0][j] == 0):
+            col_has_zero = True
+            break
+
+    for i in range(r):
+        for j in range(c):
+            if(nums[i][j] == 0):
+                nums[i][0] = 0
+                nums[0][j] = 0
+
+    for i in range(1, r):
+        for j in range(1, c):
+            if (nums[0][j] == 0 or nums[i][0] == 0):
+                nums[i][j] = 0
+
+    if(row_has_zero == True):
+        for i in range(r):
+            nums[i][0] = 0
+
+    if(col_has_zero == True):
+        for j in range(c):
+            nums[0][j] = 0
 
     
+    return nums
 
 
 
@@ -33,7 +66,7 @@ def main():
         [11, 12, 13, 14, 15],
         [16, 17, 18, 19, 0 ]        
     ]
-    result = zero_striping(nums)
+    result = zero_striping_inplace(nums)
     ic(result)
 
 
