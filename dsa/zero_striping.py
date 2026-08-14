@@ -5,7 +5,7 @@ def zero_striping(nums: list[list[int]]) -> list[list[int]]:
     rows = set()
     cols = set()
 
-    for i,v in enumerate(nums):
+    for i, v in enumerate(nums):
         for j, c in enumerate(v):
             if(c == 0):
                 rows.add(i)
