@@ -40,20 +40,27 @@ class SinglyLinkedList:
         
 
 def in_place_linked_list_reversal(linkl: SinglyLinkedList):
-    i = linkl.head
-    j = i.next
+    # i = linkl.head
+    # pos = i.next
 
-    while(i.next != None):
-        k = i
+    # while(i.next != None):
+    #     prev = i
+    #     i = pos
+    #     if(i.next != None):
+    #         pos = i.next
+    #         i.next = prev
+    #     else:
+    #         i.next = prev
+    #         linkl.head.next = None
+    #         linkl.head = i
+    #         break
+    i, prev = linkl.head, None
+    while(i != None):
+        j = i.next
+        i.next = prev
+        prev = i
         i = j
-        if(i.next != None):
-            j = i.next
-            i.next = k
-        else:
-            i.next = k
-            linkl.head.next = None
-            linkl.head = i
-            break
+    linkl.head = prev
 
 
 
