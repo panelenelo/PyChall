@@ -63,6 +63,23 @@ def in_place_linked_list_reversal(linkl: SinglyLinkedList):
     linkl.head = prev
 
 
+def recursive_linked_list_reversal(list: SinglyLinkedList):
+    new_head = recursive_aux(list.head, None)
+    list.head=new_head
+
+
+def recursive_aux(node: Node, prev: Node):
+    j = node.next
+    node.next = prev
+    prev = node
+    node = j
+    if(node == None):
+        return prev
+    head = recursive_aux(node, prev)
+    return head    
+
+
+
 
 def main():
     linkl = deque()
@@ -81,7 +98,8 @@ def main():
     list.append(4)
     list.append(5)
     list.elPrint()
-    in_place_linked_list_reversal(list)
+    #in_place_linked_list_reversal(list)
+    recursive_linked_list_reversal(list)
     print("-")
     list.elPrint()
 
