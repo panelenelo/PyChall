@@ -1,3 +1,5 @@
+from __future__ import annotations  # For the Node reference inside the init function
+
 class Node:
     def __init__(self, v: int, next: Node|None=None):
         self.v = v

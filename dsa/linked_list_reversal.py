@@ -1,4 +1,3 @@
-from __future__ import annotations  # For the Node reference inside the init function
 from SinglyLinkedList import SinglyLinkedList, Node
 from icecream import ic
 from collections import deque
@@ -79,20 +78,6 @@ def main():
     recursive_linked_list_reversal(list)
     print("-")
     list.elPrint()
-
-
-
-    
-    
-
-    
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
