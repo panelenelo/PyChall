@@ -19,6 +19,7 @@ def par_sum_hashmap(nums: list[int], target:int) -> list[int]:
 def main():
     nums = [-1, 3, 4, 2]
     target = 3
+    ic(target)
     result = par_sum_hashmap(nums, target)
     ic(result)
 
