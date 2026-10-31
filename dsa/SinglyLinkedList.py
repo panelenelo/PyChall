@@ -21,4 +21,14 @@ class SinglyLinkedList:
         while(i != None):
             print(i.v)
             i = i.next
-        
+    
+    def __iter__(self):
+        self.a = self.head
+        return self
+    
+    def __next__(self):
+        if(self.a.next != None):
+            self.a = self.a.next
+            return self.a
+        else:
+            raise StopIteration
